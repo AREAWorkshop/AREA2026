@@ -16,7 +16,7 @@ const siteContent = {
     copyrightYear: '2026'
   },
   links: {
-    submitPaper: 'https://easychair.org/account/signin?l=4844646549909222780.1774277895.b3ad5c31',
+    submitPaper: 'https://easychair.org/conferences/?conf=paams26',
     submissionGuidelines: '#cfp',
     registration: 'https://www.paams.net/registration',
     paams: 'https://www.paams.net/',
