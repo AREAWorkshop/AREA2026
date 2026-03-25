@@ -1,4 +1,13 @@
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const compactHeroGraphPositions = [
+  { x: 15, y: 24 },
+  { x: 50, y: 8 },
+  { x: 85, y: 24 },
+  { x: 85, y: 76 },
+  { x: 15, y: 76 },
+  { x: 50, y: 92 }
+];
+let heroGraphLayout = getHeroGraphLayout();
 
 /* =========================
    Editable workshop content
@@ -11,6 +20,8 @@ const siteContent = {
     hostConferenceLine: 'In conjunction with PAAMS 2026',
     location: 'Naples, Italy',
     dateRange: 'TBA, October 2026',
+    submitDeadlineDisplay: '17 April 2026',
+    submitDeadlineISO: '2026-04-17',
     tagline: 'Advancing reliable engineered autonomy through agents, robotics, and verification.',
     contactEmail: 'area.workshop.info@gmail.com',
     copyrightYear: '2026'
@@ -255,7 +266,7 @@ const siteContent = {
       image: 'images/angelo.jpg',
       imagePosition: '50% 24%',
       imageZoom: 1.08,
-      imageShiftX: '10%',
+      imageShiftX: '0%',
       link: 'https://angeloferrando.github.io/'
     },
     {
@@ -330,17 +341,20 @@ function renderHeroGraph() {
 
   nodesRoot.textContent = '';
   linesRoot.textContent = '';
-  siteContent.heroNodes.forEach((node, index) => {
+  const nodes = getHeroGraphNodes();
+  nodes.forEach((node, index) => {
     const link = document.createElement('a');
+    const tooltipId = `hero-node-tooltip-${index}`;
     link.className = 'graph-node';
     link.href = `#${node.target}`;
     link.dataset.graphTarget = node.target;
     link.style.setProperty('--x', node.x);
     link.style.setProperty('--y', node.y);
     link.setAttribute('aria-label', `${node.label}: ${node.description}`);
+    link.setAttribute('aria-describedby', tooltipId);
     link.innerHTML = `
       <span class="graph-node-label">${node.label}</span>
-      <span class="node-tooltip">${node.description}</span>
+      <span class="node-tooltip" id="${tooltipId}">${node.description}</span>
     `;
     nodesRoot.appendChild(link);
 
@@ -360,6 +374,22 @@ function renderHeroGraph() {
 
 }
 
+function getHeroGraphLayout() {
+  if (window.innerWidth <= 720) {
+    return 'compact';
+  }
+
+  return 'desktop';
+}
+
+function getHeroGraphNodes() {
+  const isCompact = heroGraphLayout === 'compact';
+  return siteContent.heroNodes.map((node, index) => ({
+    ...node,
+    ...(isCompact ? compactHeroGraphPositions[index] : {})
+  }));
+}
+
 function curvePath(x, y, index, coreX, coreY) {
   const dx = x - coreX;
   const dy = y - coreY;
@@ -377,6 +407,110 @@ function curvePath(x, y, index, coreX, coreY) {
   return `M ${startX} ${startY} Q ${controlX} ${controlY} ${x} ${y}`;
 }
 
+function getTopicIcon(topic) {
+  const normalized = topic.toLowerCase();
+  const icon = (content) => `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      ${content}
+    </svg>
+  `;
+
+  if (normalized.includes('architectures')) {
+    return icon(`
+      <rect x="4" y="4" width="6" height="6" rx="2"></rect>
+      <rect x="14" y="4" width="6" height="6" rx="2"></rect>
+      <rect x="9" y="14" width="6" height="6" rx="2"></rect>
+      <path d="M10 7h4M12 10v4"></path>
+    `);
+  }
+
+  if (normalized.includes('software engineering')) {
+    return icon(`
+      <path d="M8 8l-4 4 4 4"></path>
+      <path d="M16 8l4 4-4 4"></path>
+      <path d="M13 5l-2 14"></path>
+    `);
+  }
+
+  if (normalized.includes('runtime verification')) {
+    return icon(`
+      <path d="M3 12h4l2-4 4 8 2-4h6"></path>
+      <path d="M5 5h14"></path>
+      <path d="M5 19h14"></path>
+    `);
+  }
+
+  if (normalized.includes('verification and validation')) {
+    return icon(`
+      <path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3z"></path>
+      <path d="M9 12l2 2 4-4"></path>
+    `);
+  }
+
+  if (normalized.includes('multi-robot')) {
+    return icon(`
+      <rect x="4" y="9" width="5" height="5" rx="1.5"></rect>
+      <rect x="15" y="9" width="5" height="5" rx="1.5"></rect>
+      <rect x="9.5" y="4" width="5" height="5" rx="1.5"></rect>
+      <path d="M9 11.5h6"></path>
+      <path d="M12 9v2.5"></path>
+    `);
+  }
+
+  if (normalized.includes('human-robot')) {
+    return icon(`
+      <circle cx="7" cy="12" r="2.5"></circle>
+      <rect x="14.5" y="9.5" width="5" height="5" rx="1.5"></rect>
+      <path d="M9.5 12h5"></path>
+    `);
+  }
+
+  if (normalized.includes('fault tolerance')) {
+    return icon(`
+      <path d="M12 5a7 7 0 1 0 7 7"></path>
+      <path d="M12 2v5h5"></path>
+      <path d="M10 12l1.5 1.5L15 10"></path>
+    `);
+  }
+
+  if (normalized.includes('neuro-symbolic')) {
+    return icon(`
+      <circle cx="6" cy="8" r="1.5"></circle>
+      <circle cx="9" cy="12" r="1.5"></circle>
+      <circle cx="6" cy="16" r="1.5"></circle>
+      <path d="M7.2 9l1 1.4M8.2 13.6l-1 1.4"></path>
+      <path d="M13 8h6"></path>
+      <path d="M13 12h6"></path>
+      <path d="M13 16h6"></path>
+      <path d="M10.8 12H13"></path>
+    `);
+  }
+
+  if (normalized.includes('coordination') || normalized.includes('negotiation')) {
+    return icon(`
+      <path d="M4 8h11"></path>
+      <path d="M12 5l3 3-3 3"></path>
+      <path d="M20 16H9"></path>
+      <path d="M12 13l-3 3 3 3"></path>
+    `);
+  }
+
+  if (normalized.includes('real-world autonomy')) {
+    return icon(`
+      <circle cx="12" cy="12" r="7"></circle>
+      <path d="M5 12h14"></path>
+      <path d="M12 5c2 2 3 4.4 3 7s-1 5-3 7"></path>
+      <path d="M12 5c-2 2-3 4.4-3 7s1 5 3 7"></path>
+      <path d="M10 14l2-2 1.7 1.5 2.8-3"></path>
+    `);
+  }
+
+  return icon(`
+    <circle cx="12" cy="12" r="2.5"></circle>
+    <path d="M12 3.5v3M12 17.5v3M3.5 12h3M17.5 12h3M6 6l2.2 2.2M15.8 15.8 18 18M18 6l-2.2 2.2M8.2 15.8 6 18"></path>
+  `);
+}
+
 function renderTopics() {
   const topicCloud = document.getElementById('topicCloud');
   if (!topicCloud) {
@@ -385,9 +519,12 @@ function renderTopics() {
 
   topicCloud.textContent = '';
   siteContent.topics.forEach((topic) => {
-    const chip = document.createElement('span');
+    const chip = document.createElement('article');
     chip.className = 'topic-chip';
-    chip.textContent = topic;
+    chip.innerHTML = `
+      <span class="topic-chip-icon" aria-hidden="true">${getTopicIcon(topic)}</span>
+      <span class="topic-chip-label">${topic}</span>
+    `;
     topicCloud.appendChild(chip);
   });
 }
@@ -409,6 +546,48 @@ function renderImportantDates() {
     `;
     datesGrid.appendChild(card);
   });
+}
+
+function renderHeroDeadline() {
+  const deadlineDate = document.querySelector('[data-hero-deadline-date]');
+  const countdown = document.querySelector('[data-hero-deadline-countdown]');
+  if (!deadlineDate || !countdown) {
+    return;
+  }
+
+  const { submitDeadlineDisplay, submitDeadlineISO } = siteContent.workshop;
+  deadlineDate.textContent = submitDeadlineDisplay;
+
+  const deadline = new Date(`${submitDeadlineISO}T23:59:59`);
+  if (Number.isNaN(deadline.getTime())) {
+    countdown.textContent = 'Deadline to be confirmed';
+    return;
+  }
+
+  const updateCountdown = () => {
+    const now = new Date();
+    const diff = deadline.getTime() - now.getTime();
+
+    if (diff <= 0) {
+      countdown.textContent = 'Deadline passed';
+      return;
+    }
+
+    const msPerDay = 24 * 60 * 60 * 1000;
+    const msPerHour = 60 * 60 * 1000;
+    const days = Math.floor(diff / msPerDay);
+    const hours = Math.floor((diff % msPerDay) / msPerHour);
+
+    if (days > 7) {
+      countdown.textContent = `${days} days left`;
+      return;
+    }
+
+    countdown.textContent = `${days}d ${hours}h left`;
+  };
+
+  updateCountdown();
+  window.setInterval(updateCountdown, 60 * 1000);
 }
 
 function renderProgramme() {
@@ -791,10 +970,34 @@ function setupBackToTop() {
   updateVisibility();
 }
 
+function setupHeroGraphLayout() {
+  let resizeFrame = 0;
+
+  const syncHeroGraph = () => {
+    resizeFrame = 0;
+    const nextLayout = getHeroGraphLayout();
+    if (nextLayout === heroGraphLayout) {
+      return;
+    }
+
+    heroGraphLayout = nextLayout;
+    renderHeroGraph();
+    applyActiveState(currentPanelId);
+  };
+
+  window.addEventListener('resize', () => {
+    if (resizeFrame) {
+      window.cancelAnimationFrame(resizeFrame);
+    }
+    resizeFrame = window.requestAnimationFrame(syncHeroGraph);
+  }, { passive: true });
+}
+
 bindWorkshopContent();
 renderHeroGraph();
 renderTopics();
 renderImportantDates();
+renderHeroDeadline();
 renderProgramme();
 renderSpeakers();
 renderOrganisers();
@@ -804,3 +1007,4 @@ setupRevealAnimations();
 setupPanels();
 setupPanelNavigation(closeMenu);
 setupBackToTop();
+setupHeroGraphLayout();

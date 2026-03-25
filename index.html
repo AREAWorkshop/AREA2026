@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="images/area_logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script>
     document.documentElement.classList.add('js-enabled');
@@ -58,6 +58,10 @@
                 <span>Agents and Robots for reliable Engineered Autonomy</span>
               </span>
               <span class="hero-title graph-hero-title" id="hero-title" data-workshop-title>AREA 2026</span>
+              <span class="hero-subtitle">
+                <span>Bridging autonomous agents, robotics, software engineering</span>
+                <span>and formal verification for reliable autonomy.</span>
+              </span>
               <span class="hero-meta graph-hero-meta">
                 <span data-workshop-host>In conjunction with PAAMS 2026</span>
               </span>
@@ -72,6 +76,11 @@
                   <img class="button-logo" src="images/paams_logo.png" alt="" aria-hidden="true">
                   <span>PAAMS 2026</span>
                 </a>
+              </span>
+              <span class="hero-deadline" aria-live="polite">
+                <span class="hero-deadline-prefix">Submit by</span>
+                <span class="hero-deadline-date" data-hero-deadline-date>17 April 2026</span>
+                <span class="hero-deadline-countdown" data-hero-deadline-countdown>Countdown loading...</span>
               </span>
             </span>
           </div>
@@ -275,19 +284,17 @@
 
   <footer class="footer">
     <div class="container footer-grid">
-      <div>
+      <div class="footer-block footer-block-left">
         <p class="footer-title" data-workshop-title>AREA 2026</p>
-        <p class="footer-meta">
-          <span data-workshop-subtitle>6th Workshop on Agents and Robots for reliable Engineered Autonomy</span><br>
-          <span data-workshop-host>In conjunction with PAAMS 2026</span><br>
-          <span data-workshop-location>Naples, Italy</span> · <span data-workshop-dates>TBA, October 2026</span>
-        </p>
+        <p class="footer-copy"><span data-workshop-location>Naples, Italy</span></p>
+        <p class="footer-copy"><span data-workshop-dates>TBA, October 2026</span></p>
       </div>
-      <div>
-        <p class="footer-meta">
-          Contact: <a class="footer-link" data-link-email href="mailto:area.workshop.info@gmail.com">area.workshop.info@gmail.com</a>
-        </p>
-        <p class="footer-copy">© <span data-copyright-year>2026</span> AREA 2026. All workshop information is subject to update.</p>
+      <div class="footer-block footer-block-center">
+        <p class="footer-copy">© AREA <span data-copyright-year>2026</span></p>
+      </div>
+      <div class="footer-block footer-block-right">
+        <p class="footer-meta">Contact</p>
+        <p class="footer-copy"><a class="footer-link" data-link-email href="mailto:area.workshop.info@gmail.com">area.workshop.info@gmail.com</a></p>
       </div>
     </div>
   </footer>
