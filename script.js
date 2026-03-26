@@ -263,7 +263,7 @@ const siteContent = {
       affiliation: 'University of Modena and Reggio Emilia (Italy)',
       bio: '',
       initials: 'AF',
-      image: 'images/angelo.jpg',
+      image: 'images/angelo.jpg?v=20260326-1',
       imagePosition: '50% 24%',
       imageZoom: 1.08,
       imageShiftX: '0%',
@@ -274,7 +274,7 @@ const siteContent = {
       affiliation: 'University of Aberdeen (UK)',
       bio: '',
       initials: 'RC',
-      image: 'images/rafael.jpeg',
+      image: 'images/rafael.jpeg?v=20260326-1',
       imagePosition: '50% 30%',
       imageZoom: 1.14,
       link: 'https://rafaelcaue.github.io/'
@@ -817,7 +817,8 @@ function getPanelIdFromHash() {
 function scrollToPanelStage(panelId) {
   const targetPanel = panelId ? document.getElementById(panelId) : null;
   const panelStage = document.getElementById('panel-stage');
-  const scrollTarget = targetPanel || panelStage;
+  const panelHeading = targetPanel?.querySelector('.section-intro') || null;
+  const scrollTarget = panelHeading || targetPanel || panelStage;
   if (!scrollTarget) {
     return;
   }
@@ -825,7 +826,11 @@ function scrollToPanelStage(panelId) {
   const headerHeight = document.documentElement.style.getPropertyValue('--header-height')
     || getComputedStyle(document.documentElement).getPropertyValue('--header-height');
   const parsedHeaderHeight = Number.parseFloat(headerHeight);
-  const offset = Number.isFinite(parsedHeaderHeight) ? parsedHeaderHeight + 18 : 102;
+  const mobileExtraOffset = window.innerWidth <= 780 ? 38 : 18;
+  const cfpExtraOffset = panelId === 'cfp' && window.innerWidth > 780 ? 22 : 0;
+  const offset = Number.isFinite(parsedHeaderHeight)
+    ? parsedHeaderHeight + mobileExtraOffset + cfpExtraOffset
+    : 120;
   const top = window.scrollY + scrollTarget.getBoundingClientRect().top - offset;
 
   window.scrollTo({
