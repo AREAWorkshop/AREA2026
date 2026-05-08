@@ -94,7 +94,7 @@ const siteContent = {
        If you replace the placeholder below, check it against the final CFP first. */
     {
       label: 'Paper submission',
-      date: '8 May 2026',
+      date: '22 May 2026',
       note: 'Submission deadline for workshop papers.',
       highlight: false
     },
