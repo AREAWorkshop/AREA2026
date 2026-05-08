@@ -20,8 +20,8 @@ const siteContent = {
     hostConferenceLine: 'In conjunction with PAAMS 2026',
     location: 'Naples, Italy',
     dateRange: 'TBA, October 2026',
-    submitDeadlineDisplay: '8 May 2026',
-    submitDeadlineISO: '2026-05-08',
+    submitDeadlineDisplay: '22 May 2026',
+    submitDeadlineISO: '2026-05-22',
     tagline: 'Advancing reliable engineered autonomy through agents, robotics, and verification.',
     contactEmail: 'area.workshop.info@gmail.com',
     copyrightYear: '2026'
