@@ -281,9 +281,24 @@ const siteContent = {
     }
   ],
   programmeCommittee: [
-    /* Add programme committee members here as:
-       { name: 'Name Surname', affiliation: 'University / Institution' } */
-  ]
+  { name: 'Eva Onaindia', affiliation: 'Universitat Politècnica de València' },
+  { name: 'Vadim Malvone', affiliation: 'Télécom Paris' },
+  { name: 'Stefano Tedeschi', affiliation: "Università della Valle d'Aosta - Université de la Vallée d'Aoste" },
+  { name: 'Marie Farrell', affiliation: 'The University of Manchester' },
+  { name: 'Matteo Rossi', affiliation: 'Politecnico di Milano' },
+  { name: 'Matt Luckcuck', affiliation: 'University of Nottingham' },
+  { name: 'Pedro Ribeiro', affiliation: 'University of York' },
+  { name: 'Stefano Mariani', affiliation: 'Università di Modena e Reggio Emilia' },
+  { name: 'Rosemary Monahan', affiliation: 'Maynooth University, Ireland' },
+  { name: 'Babak Esfandiari', affiliation: 'Carleton University' },
+  { name: 'Gleifer Alves', affiliation: 'UTFPR - Universidade Tecnológica Federal do Paraná - Campus Ponta Grossa' },
+  { name: 'Livia Lestingi', affiliation: 'Politecnico di Milano' },
+  { name: 'Daniela Briola', affiliation: 'University of Milano Bicocca' },
+  { name: 'Tobias Ahlbrecht', affiliation: 'Department of Informatics, Clausthal University of Technology' },
+  { name: 'Christian Colombo', affiliation: 'University of Malta' },
+  { name: 'Stefania Monica', affiliation: 'Università degli Studi di Modena e Reggio Emilia' },
+  { name: 'Viviana Mascardi', affiliation: 'University of Genova, Italy' }
+]
 };
 
 const textBindings = [
