@@ -19,7 +19,7 @@ const siteContent = {
     subtitleKickerLines: ['6th Workshop on', 'Agents and Robots for reliable Engineered Autonomy'],
     hostConferenceLine: 'In conjunction with PAAMS 2026',
     location: 'Naples, Italy',
-    dateRange: 'TBA, October 2026',
+    dateRange: '21 October 2026',
     submitDeadlineDisplay: '25 June 2026',
     submitDeadlineISO: '2026-06-25',
     tagline: 'Advancing reliable engineered autonomy through agents, robotics, and verification.',
