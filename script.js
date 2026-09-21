@@ -113,7 +113,7 @@ const siteContent = {
     {
       label: 'Workshop dates',
       date: 'October 2026',
-      note: 'One workshop day during PAAMS 2026 (21-23 October 2026), exact day TBC.',
+      note: 'One workshop day during PAAMS 2026 (21 October 2026).',
       highlight: true
     }
   ],
