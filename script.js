@@ -120,140 +120,128 @@ const siteContent = {
   programme: [
     {
       kind: 'item',
-      time: '09:00 - 09:15',
-      title: 'Opening remarks',
-      type: 'Workshop welcome',
-      description: 'Introduction to the workshop aims, format, and thematic scope.'
+      time: '11:00–11:10',
+      title: 'Welcome & Introduction',
+      type: 'Workshop opening'
     },
     {
-      kind: 'session',
-      title: 'Session 1: Agent Programming & Reasoning'
+      kind: 'invited',
+      time: '11:10–12:10',
+      title: 'TBA',
+      type: 'Invited talk',
+      speaker: 'Silvia Rossi',
+      affiliation: 'University of Naples Federico II (Unina)',
+      abstract: 'TBA'
     },
     {
-      kind: 'item',
-      time: '09:15 - 09:40',
-      title: 'Accepted paper title',
-      type: 'Paper presentation',
-      description: 'Author names will be added after the review process.'
+      kind: 'paper',
+      time: '12:10–12:35',
+      title: 'Take Them Out: A Game Testbed for Inspectable BDI Agents with Bounded Dialogue',
+      type: 'Paper',
+      authors: 'Edoardo Vassallo, Andrea Gatti, Angelo Ferrando and Viviana Mascardi',
+      keywords: ['BDI agents', 'AgentSpeak(L)', 'VEsNA', 'Rasa', 'Game-based testbeds', 'Reliable autonomy'],
+      abstract: 'Reliable autonomy benefits from systems in which decisions, perceptions, human inputs, and adaptation steps can be inspected. This paper presents Take Them Out, a small game-based testbed that combines existing VEsNA-style mind/body coupling, Rasa-based intent classification, and VEsNA-Pro-style personality parameters in a stealth scenario. Guards patrol a map, detect and chase the player, exchange sightings, ask captains for coordination, and update future behaviour after bounded natural-language interactions. The contribution is not a new BDI language, a new dialogue framework, or a new model of personality. It is an executable case study showing how these existing mechanisms can be composed around explicit interfaces: AgentSpeak(L) minds, reactive Godot bodies, Rasa dialogue servers, and JSON messages. We describe the scenario, architecture, BDI roles, dialogue design, validation hooks, and preliminary results. The testbed is intentionally modest, but it exposes concrete reliability questions about reporting, pursuit, coordination, persistence, and dialogue-driven behavioural change.'
     },
     {
-      kind: 'item',
-      time: '09:40 - 10:05',
-      title: 'Accepted paper title',
-      type: 'Paper presentation',
-      description: 'Author names will be added after the review process.'
-    },
-    {
-      kind: 'break',
-      time: '10:05 - 10:30',
-      title: 'Coffee break',
-      type: 'Break'
-    },
-    {
-      kind: 'highlight',
-      title: 'Invited Talk'
-    },
-    {
-      kind: 'item',
-      time: '10:30 - 11:15',
-      title: 'Speaker to be announced',
-      type: 'Invited speaker',
-      description: 'Talk title and abstract will be published once the invited speaker has been confirmed.'
-    },
-    {
-      kind: 'session',
-      title: 'Session 2: Verification & Safety'
-    },
-    {
-      kind: 'item',
-      time: '11:15 - 11:40',
-      title: 'Accepted paper title',
-      type: 'Paper presentation',
-      description: 'Author names will be added after the review process.'
-    },
-    {
-      kind: 'item',
-      time: '11:40 - 12:05',
-      title: 'Accepted paper title',
-      type: 'Paper presentation',
-      description: 'Author names will be added after the review process.'
+      kind: 'paper',
+      time: '12:35–13:00',
+      title: 'Towards Scalable Strategic Reasoning in Multi-Agent Games: The FindMe Approach',
+      type: 'Paper',
+      authors: 'Salvatore Romano, Aniello Murano, Vadim Malvone and Vincenzo Pio Palma',
+      keywords: ['Gaming', 'Model Checking', 'Strategic Reasoning'],
+      abstract: 'Autonomous decision-making in adversarial video games requires agents to act in real time while sustaining long-term player engagement. Formal methods such as Computation Tree Logic (CTL) provide rigorous foundations for strategy generation, but exhaustive model checking is hindered by state-space explosion and may produce rigid, omniscient behaviours that undermine gameplay. This paper revisits and consolidates the FindMe framework, which addresses these limitations through depth-limited model checking and bounded, heuristic-driven policy synthesis. We review its core mechanisms, including a dual-heuristic search engine that combines Breadth-First Search (BFS) for survivability with A* for tactical optimization, together with a lightweight opponent-profiling module. By analyzing evaluations in a custom turn-based environment, we show that bounded symbolic reasoning can deliver real-time, context-sensitive, and engaging NPC behaviors. We finally position this approach as a practical bridge between reactive scripting and formal strategic reasoning in modern multi-agent environments.'
     },
     {
       kind: 'break',
-      time: '12:05 - 13:15',
-      title: 'Lunch break',
+      time: '13:00–14:30',
+      title: 'Lunch Break',
       type: 'Break'
     },
     {
-      kind: 'session',
-      title: 'Session 3: Robotics & Real-World Autonomy'
+      kind: 'invited',
+      time: '14:30–15:30',
+      title: 'TBA',
+      type: 'Invited talk',
+      speaker: 'Vadim Malvone',
+      affiliation: 'Télécom Paris',
+      abstract: 'TBA'
     },
     {
-      kind: 'item',
-      time: '13:15 - 13:40',
-      title: 'Accepted paper title',
-      type: 'Paper presentation',
-      description: 'Author names will be added after the review process.'
+      kind: 'paper',
+      time: '15:30–15:55',
+      title: 'When Agents Control Robots: A Zero Trust Policy Model for Agentic Cyber-Physical Systems',
+      type: 'Paper',
+      authors: 'Tharindu Ranathunga, Kavishka Fernando and Susan Rea',
+      keywords: ['Zero Trust', 'Agentic AI', 'Cyber-Physical Systems', 'Robotic Security', 'Physical Actuation'],
+      abstract: 'Multi-agent systems powered by large foundation models (LFMs) are increasingly deployed to control industrial robots through natural language, creating deployments in which security failures produce physical consequences. We analyse this threat landscape through Cobot-Claw, a deployed four-agent system for UR3e robotic arm control, and identify five attack classes specific to agentic cyber-physical systems. We propose ZTPM, a Zero Trust Policy Model comprising 25 typed primitives across five enforcement domains with Physical Impact Tiers as a runtime policy dimension. An empirical evaluation across 60 execution traces on two LFM backends provides initial evidence that actuation parameter selection is model-dependent and non-deterministic, motivating the need for policy-level enforcement at the physical actuation boundary.'
     },
     {
-      kind: 'item',
-      time: '13:40 - 14:05',
-      title: 'Accepted paper title',
-      type: 'Paper presentation',
-      description: 'Author names will be added after the review process.'
+      kind: 'paper',
+      time: '15:55–16:20',
+      title: 'MAFIS: A Resilience Observatory for Lifelong Multi-Agent Path Finding',
+      type: 'Paper',
+      authors: 'Teddy Truong and Yannick Francillette',
+      keywords: ['Multi-Agent Path Finding', 'MAPF', 'Lifelong MAPF', 'Fault Injection', 'Fault Resilience', 'Differential Metrics', 'Multi-Robot Systems'],
+      abstract: 'Lifelong multi-agent path finding coordinates fleets of autonomous robots in warehouses. Existing benchmarks measure throughput under nominal conditions, and execution-realism testbeds add kinodynamic and communication realism to study how design choices affect that throughput. Neither measures how a running system degrades and recovers once faults exceed design margins. We propose a differential evaluation framework that pairs every faulted run with a deterministic same-seed baseline and reports five metrics grounded in resilience and control theory: fault tolerance, time-weighted throughput error, attack rate, cascade depth, and rapidity. We implement the framework in the Multi-Agent Fault Injection Simulator, a browser-accessible observatory running three reference-traceable lifelong solvers (Priority Inheritance with Backtracking, Rolling-Horizon Collision Resolution with Priority-Based Search, Token Passing) under six fault scenarios with seeded, bit-reproducible execution.'
     },
     {
       kind: 'break',
-      time: '14:05 - 14:25',
-      title: 'Coffee break',
+      time: '16:30–17:00',
+      title: 'Coffee Break',
       type: 'Break'
     },
     {
-      kind: 'session',
-      title: 'Session 4: Discussion & Outlook'
+      kind: 'paper',
+      time: '17:00–17:25',
+      title: 'A Game Model for Human–Dog Interaction',
+      type: 'Paper',
+      authors: "Gabriel Ballot, Biagio D'Aniello, Alfredo Di Lucrezia and Aniello Murano",
+      keywords: ['Human–dog interaction', 'Multi-agent system verification', 'Strategic and temporal logics'],
+      abstract: 'Dogs interact with humans through rich behavioural loops. They attend to gestures, follow gaze and pointing, search by smell, revise actions after partial failure, and sometimes coordinate with human or canine partners. These interactions are strategic in the broad sense that the future behaviour of one participant depends on the choices and observations of the other participants. The human can plan, choose signals, and adapt the protocol. The dog, instead, is better described by probabilistic response patterns that depend on attention, motivation, training, perception, stress, and previous experience. This paper proposes a logical framework for this setting. We introduce a hybrid concurrent game model in which the human is a strategic agent, the dog is represented by stochastic behavioural kernels, and both agents have partial and asymmetric information. The model combines ideas from concurrent game structures, partially observable stochastic systems, epistemic models, and strategic temporal logics. We then sketch a specification language that mixes temporal, epistemic, probabilistic, and strategic operators. Using the model and language developed, one can specify and verify properties of observable dog–human interaction. We illustrate the approach on a simple scenario and show how properties such as successful retrieval, safe guidance, information-sensitive behaviour, and human teachability can be expressed as formulas. The proposed theory opens a formal route from canine cognition and animal-computer interaction to strategic reasoning, reactive synthesis, and probabilistic verification.'
     },
     {
-      kind: 'item',
-      time: '14:25 - 14:50',
-      title: 'Accepted paper title',
-      type: 'Paper presentation',
-      description: 'Author names will be added after the review process.'
+      kind: 'paper',
+      time: '17:25–17:50',
+      title: 'Reasoning about a Diagnostic Game: a 3-Way Neurosymbolic Architecture',
+      type: 'Paper',
+      authors: 'Ciro Listone, Vadim Malvone and Aniello Murano',
+      keywords: ['Neurosymbolic AI', 'Obstruction Logic', 'eHealth'],
+      abstract: "Clinical decision support systems increasingly rely on deep learning techniques to assist diagnostic processes. Although these approaches have demonstrated remarkable capabilities, their black-box nature often limits transparency, explainability, and trustworthiness, particularly in safety-critical domains such as healthcare. Neurosymbolic approaches have emerged as a promising direction for combining the pattern recognition capabilities of neural networks with the formal reasoning guarantees provided by symbolic methods. In this paper, we present a work-in-progress neurosymbolic architecture for diagnostic decision support that integrates a Denoising Autoencoder (DAE) with a three-player extension of Obstruction Logic (OL). The DAE is employed to learn symptom correlations from clinical data and to estimate the uncertainty associated with a patient's symptom profile through its reconstruction error. This information is then translated into symbolic parameters that influence the behavior of an adversarial agent within the logical model. In parallel, symptom severity information is used to derive resource-related parameters representing the diagnostic capabilities available to the decision maker. The resulting formal framework models diagnosis as a resource-aware game involving a Traveler, a Navigator, and a Demon, capturing the interplay between clinical decisions, uncertainty, and resource constraints. The proposed architecture aims to establish a principled bridge between data-driven uncertainty estimation and formal diagnostic reasoning. While the framework is currently at an early stage of development, this work provides a foundation for future investigations into uncertainty-aware and explainable clinical decision support systems."
     },
     {
-      kind: 'item',
-      time: '14:50 - 15:15',
-      title: 'Accepted paper title',
-      type: 'Paper presentation',
-      description: 'Author names will be added after the review process.'
+      kind: 'paper',
+      time: '17:50–18:15',
+      title: 'One Agent, A Thousand Faces: Learning Personality Masks for BDI Robots',
+      type: 'Paper',
+      authors: 'Zahra Daoui, Andrea Gatti, Viviana Mascardi and Angelo Ferrando',
+      keywords: ['BDI', 'Personality mask', 'Counterfactual regret', 'OCEAN', 'Pro-AgentSpeak(L)'],
+      abstract: "In his last completed novel published in 1926, One, No One, and One Hundred Thousand, the Nobel Prize-winning author Luigi Pirandello observed that we are not a single, fixed self, but rather a different self in every relationship we inhabit. We all have different masks that we wear in different situations, embodying one, none, and one hundred thousand different characters during our daily life. While humans naturally adapt their behaviour to fit different social contexts, existing robot architectures are restricted to a single, immutable personality (if any). Such inflexibility forces uniform behaviour across all users, thereby failing to differentiate between cooperative and exploitative interactions. To address this problem, we propose a personality mask architecture for Belief-Desires-Intentions robots implemented in Pro-AgentSpeak(L). Each robot maintains a stable core identity and learns a mask for each partner through counterfactual regret minimization. At the start of an interaction, the robot composes an effective personality by adding the mask to its core identity. This temporary persona guides the robot’s decision-making and plan selection. Once the interaction ends, the mask is removed, allowing the robot to revert to its authentic self. By applying these masks in the robot's belief system, we successfully integrate fluid personality adaptation directly into the standard BDI deliberation cycle. We aim to demonstrate that such an approach allows for adaptive social learning via learned masks that preserve the core identity of the agent."
     },
     {
-      kind: 'item',
-      time: '15:15 - 15:45',
-      title: 'Panel / discussion',
-      type: 'Community exchange',
-      description: 'Discussion across agent-oriented and robotics perspectives on dependable autonomy.'
-    },
-    {
-      kind: 'item',
-      time: '15:45 - 16:00',
-      title: 'Closing remarks',
-      type: 'Workshop close',
-      description: 'Wrap-up, next steps, and closing discussion for AREA 2026.'
+      kind: 'paper',
+      time: '18:15–18:40',
+      title: 'Runtime Verification Across the Trust Boundary: Lessons from a Connected-Fleet Pipeline',
+      type: 'Paper',
+      authors: 'Damian Navarro, Christian Colombo, Robert Abela and Axel Curmi',
+      keywords: ['Runtime verification', 'Engineered autonomy', 'Fleet telemetry', 'Hardware-assisted security', 'LARVA'],
+      abstract: 'Engineered autonomous and semi-autonomous vehicular systems act on streaming telemetry such as position, motion, and engine state, whose integrity directly affects safe behaviour. Runtime verification (RV) provides a means of checking the behavioural plausibility of such data at runtime, but in real deployments the monitor does not operate in isolation: it must coexist with the security mechanisms that protect the same data path, and with tight near-real-time latency budgets. In this paper we report on the design tensions that arise when RV and hardware-assisted encryption share a single telemetry path, grounded in a concrete connected-fleet pipeline built around a Teltonika FMC650 telematics unit, SEcube-backed cryptography, and monitors generated from a single Larva specification deployed on both sides of the encryption boundary. We distil five transferable lessons for building reliable runtime assurance into engineered autonomous systems. As RV and hardware-assisted security increasingly converge on the same data paths in fleet, IoT, and cyber-physical deployments, the tensions and trade-offs we characterise will become routine engineering concerns.'
     }
   ],
   speakers: [
     {
-      name: 'To be announced',
-      affiliation: 'Speaker announcement pending',
-      bio: '',
-      initials: 'TBA',
+      name: 'Silvia Rossi',
+      affiliation: 'University of Naples Federico II (Unina)',
+      talkTitle: 'TBA',
+      abstract: 'TBA',
+      initials: 'SR',
       link: ''
     },
     {
-      name: 'To be announced',
-      affiliation: 'Speaker announcement pending',
-      bio: '',
-      initials: 'TBA',
+      name: 'Vadim Malvone',
+      affiliation: 'Télécom Paris',
+      talkTitle: 'TBA',
+      abstract: 'TBA',
+      initials: 'VM',
       link: ''
     }
   ],
@@ -605,6 +593,13 @@ function renderHeroDeadline() {
   window.setInterval(updateCountdown, 60 * 1000);
 }
 
+function normalizeSearchText(value) {
+  return value
+    .toLocaleLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+}
+
 function renderProgramme() {
   const programmeList = document.getElementById('programmeList');
   if (!programmeList) {
@@ -616,6 +611,11 @@ function renderProgramme() {
     const entry = document.createElement('li');
     const kind = item.kind || 'item';
     entry.className = `programme-item programme-item-${kind}`;
+    entry.dataset.searchText = normalizeSearchText(
+      [item.title, item.authors, item.speaker]
+        .filter(Boolean)
+        .join(' ')
+    );
 
     if (kind === 'session' || kind === 'highlight') {
       const bandClass = kind === 'highlight' ? 'programme-band programme-band-highlight' : 'programme-band programme-band-session';
@@ -624,17 +624,76 @@ function renderProgramme() {
       return;
     }
 
+    const typeMarkup = item.type ? `<p class="programme-type">${item.type}</p>` : '';
+    const speakerMarkup = item.speaker
+      ? `<p class="programme-speaker">${item.speaker} <span>${item.affiliation}</span></p>`
+      : '';
+    const authorsMarkup = item.authors ? `<p class="programme-authors">${item.authors}</p>` : '';
+    const keywordsMarkup = item.keywords?.length
+      ? `<div class="programme-keywords" aria-label="Keywords">${item.keywords
+          .map((keyword) => `<span>${keyword}</span>`)
+          .join('')}</div>`
+      : '';
+    const abstractMarkup = item.abstract && item.abstract !== 'TBA'
+      ? `
+        <details class="programme-abstract">
+          <summary>Read abstract</summary>
+          <p>${item.abstract}</p>
+        </details>
+      `
+      : item.abstract === 'TBA'
+        ? '<p class="programme-abstract-tba"><strong>Abstract:</strong> TBA</p>'
+        : '';
     const descriptionMarkup = item.description ? `<p class="programme-description">${item.description}</p>` : '';
 
     entry.innerHTML = `
       <div class="programme-time"><span>${item.time}</span></div>
       <div class="programme-content">
+        ${typeMarkup}
         <h3 class="programme-title">${item.title}</h3>
+        ${speakerMarkup}
+        ${authorsMarkup}
         ${descriptionMarkup}
+        ${keywordsMarkup}
+        ${abstractMarkup}
       </div>
     `;
     programmeList.appendChild(entry);
   });
+}
+
+function setupProgrammeSearch() {
+  const input = document.getElementById('programmeSearch');
+  const status = document.getElementById('programmeSearchStatus');
+  const entries = Array.from(document.querySelectorAll('#programmeList .programme-item'));
+  if (!input || !status || !entries.length) {
+    return;
+  }
+
+  const filterProgramme = () => {
+    const query = normalizeSearchText(input.value.trim());
+    let matchCount = 0;
+
+    entries.forEach((entry) => {
+      const matches = !query || entry.dataset.searchText.includes(query);
+      entry.classList.toggle('is-filtered-out', !matches);
+      if (matches) {
+        matchCount += 1;
+      }
+    });
+
+    if (!query) {
+      status.textContent = '';
+      return;
+    }
+
+    status.textContent = matchCount === 1
+      ? '1 programme item found.'
+      : `${matchCount} programme items found.`;
+  };
+
+  input.addEventListener('input', filterProgramme);
+  input.addEventListener('search', filterProgramme);
 }
 
 function renderSpeakers() {
@@ -646,6 +705,15 @@ function renderSpeakers() {
   speakerGrid.textContent = '';
   siteContent.speakers.forEach((speaker) => {
     const bioMarkup = speaker.bio ? `<p class="person-bio">${speaker.bio}</p>` : '';
+    const talkMarkup = speaker.talkTitle
+      ? `
+        <div class="speaker-talk">
+          <p class="speaker-talk-label">Talk title</p>
+          <p class="speaker-talk-title">${speaker.talkTitle}</p>
+          <p class="speaker-talk-abstract"><strong>Abstract:</strong> ${speaker.abstract || 'TBA'}</p>
+        </div>
+      `
+      : '';
     const card = document.createElement(speaker.link ? 'a' : 'article');
     card.className = `card person-card speaker-card reveal${speaker.link ? ' speaker-card-link' : ''}`;
     if (speaker.link) {
@@ -663,6 +731,7 @@ function renderSpeakers() {
           <p class="person-affiliation">${speaker.affiliation}</p>
         </div>
       </div>
+      ${talkMarkup}
       ${bioMarkup}
     `;
     speakerGrid.appendChild(card);
@@ -722,8 +791,10 @@ function renderOrganisers() {
           .map(
             (member) => `
               <div class="committee-item" role="listitem">
-                <p class="committee-name">${member.name}</p>
-                <p class="committee-affiliation">${member.affiliation}</p>
+                <div class="committee-member">
+                  <p class="committee-name">${member.name}</p>
+                  <p class="committee-affiliation">${member.affiliation}</p>
+                </div>
               </div>
             `
           )
@@ -733,7 +804,13 @@ function renderOrganisers() {
     : '<p class="committee-empty">TBA</p>';
 
   committeeCard.innerHTML = `
-    <p class="card-label">Programme Committee</p>
+    <div class="committee-header">
+      <div>
+        <p class="card-label">Programme Committee</p>
+        <h3>Review panel</h3>
+      </div>
+      <p class="committee-count">${committeeMembers.length} members</p>
+    </div>
     ${committeeMarkup}
   `;
   organiserGrid.appendChild(committeeCard);
@@ -1019,6 +1096,7 @@ renderTopics();
 renderImportantDates();
 renderHeroDeadline();
 renderProgramme();
+setupProgrammeSearch();
 renderSpeakers();
 renderOrganisers();
 

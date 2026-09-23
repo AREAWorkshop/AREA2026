@@ -10,11 +10,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260326-1">
+  <link rel="stylesheet" href="styles.css?v=20260923-7">
   <script>
     document.documentElement.classList.add('js-enabled');
   </script>
-  <script src="script.js?v=20260326-1" defer></script>
+  <script src="script.js?v=20260923-8" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -187,19 +187,31 @@
 
           <div class="programme-layout">
             <div class="programme-note reveal">
-              <p class="programme-note-title">Detailed workshop programme: TBA.</p>
+              <p class="programme-note-title">Wednesday, 21 October 2026</p>
               <p>
-                Session titles, accepted papers, invited talks, timings, and breaks will be published after the review process.
+                Paper slots include a 20-minute presentation and 5 minutes for Q&amp;A. Invited talks include a 50-minute talk and 10 minutes for Q&amp;A.
               </p>
             </div>
 
-            <!-- <div class="programme-table reveal" aria-label="Preliminary workshop schedule">
+            <div class="programme-search reveal" role="search">
+              <label for="programmeSearch">Search the programme</label>
+              <div class="programme-search-field">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="6.5"></circle>
+                  <path d="m16 16 4 4"></path>
+                </svg>
+                <input id="programmeSearch" type="search" placeholder="Search by title or author" autocomplete="off">
+              </div>
+              <p class="programme-search-status" id="programmeSearchStatus" role="status" aria-live="polite"></p>
+            </div>
+
+            <div class="programme-table reveal" aria-label="AREA 2026 workshop programme">
               <div class="programme-table-head" aria-hidden="true">
                 <span>Time</span>
                 <span>Activity</span>
               </div>
               <ol class="programme-list" id="programmeList"></ol>
-            </div> -->
+            </div>
           </div>
         </div>
       </section>
