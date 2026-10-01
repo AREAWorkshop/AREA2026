@@ -153,13 +153,13 @@ const siteContent = {
     },
     {
       kind: 'break',
-      time: '13:00–14:30',
+      time: '13:00–14:00',
       title: 'Lunch Break',
       type: 'Break'
     },
     {
       kind: 'invited',
-      time: '14:30–15:30',
+      time: '14:00–15:00',
       title: 'TBA',
       type: 'Invited talk',
       speaker: 'Vadim Malvone',
@@ -168,7 +168,7 @@ const siteContent = {
     },
     {
       kind: 'paper',
-      time: '15:30–15:55',
+      time: '15:00–15:25',
       title: 'When Agents Control Robots: A Zero Trust Policy Model for Agentic Cyber-Physical Systems',
       type: 'Paper',
       authors: 'Tharindu Ranathunga, Kavishka Fernando and Susan Rea',
@@ -177,7 +177,7 @@ const siteContent = {
     },
     {
       kind: 'paper',
-      time: '15:55–16:20',
+      time: '15:25–15:50',
       title: 'MAFIS: A Resilience Observatory for Lifelong Multi-Agent Path Finding',
       type: 'Paper',
       authors: 'Teddy Truong and Yannick Francillette',
@@ -186,13 +186,13 @@ const siteContent = {
     },
     {
       kind: 'break',
-      time: '16:30–17:00',
+      time: '16:00–16:30',
       title: 'Coffee Break',
       type: 'Break'
     },
     {
       kind: 'paper',
-      time: '17:00–17:25',
+      time: '16:30–16:55',
       title: 'A Game Model for Human–Dog Interaction',
       type: 'Paper',
       authors: "Gabriel Ballot, Biagio D'Aniello, Alfredo Di Lucrezia and Aniello Murano",
@@ -201,7 +201,7 @@ const siteContent = {
     },
     {
       kind: 'paper',
-      time: '17:25–17:50',
+      time: '16:55–17:20',
       title: 'Reasoning about a Diagnostic Game: a 3-Way Neurosymbolic Architecture',
       type: 'Paper',
       authors: 'Ciro Listone, Vadim Malvone and Aniello Murano',
@@ -210,7 +210,7 @@ const siteContent = {
     },
     {
       kind: 'paper',
-      time: '17:50–18:15',
+      time: '17:20–17:45',
       title: 'One Agent, A Thousand Faces: Learning Personality Masks for BDI Robots',
       type: 'Paper',
       authors: 'Zahra Daoui, Andrea Gatti, Viviana Mascardi and Angelo Ferrando',
@@ -219,7 +219,7 @@ const siteContent = {
     },
     {
       kind: 'paper',
-      time: '18:15–18:40',
+      time: '17:45–18:10',
       title: 'Runtime Verification Across the Trust Boundary: Lessons from a Connected-Fleet Pipeline',
       type: 'Paper',
       authors: 'Damian Navarro, Christian Colombo, Robert Abela and Axel Curmi',
