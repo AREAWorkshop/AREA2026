@@ -160,11 +160,11 @@ const siteContent = {
     {
       kind: 'invited',
       time: '14:00–15:00',
-      title: 'TBA',
+      title: 'From Theory to Practice: Formal Verification of Multi-Agent Systems',
       type: 'Invited talk',
       speaker: 'Vadim Malvone',
       affiliation: 'Télécom Paris',
-      abstract: 'TBA'
+      abstract: 'Game-theoretic methods provide a powerful foundation for reasoning about strategic behavior in multi-agent systems. Over the past decades, this line of research has led to the development of expressive formalisms such as Alternating-time Temporal Logic and Strategy Logic, enabling the specification and verification of complex strategic properties. Despite these theoretical advances, applying formal verification techniques to realistic multi-agent systems remains challenging. Existing tools are often tightly coupled to specific logics or models, limiting their flexibility and usability. In this talk, we provide an overview of formal verification techniques for multi-agent systems, with a particular focus on strategic reasoning. We then present VITAMIN, a modular and extensible framework designed to bridge the gap between theory and practice. Unlike existing approaches, VITAMIN supports different logical formalisms and system models through a unified architecture, making the verification process more flexible and accessible. We outline the main design principles behind VITAMIN and illustrate its use.'
     },
     {
       kind: 'paper',
@@ -239,9 +239,11 @@ const siteContent = {
     {
       name: 'Vadim Malvone',
       affiliation: 'Télécom Paris',
-      talkTitle: 'TBA',
-      abstract: 'TBA',
+      bio: 'Vadim Malvone is an expert in multi-agent system verification with over ten years of research experience. He earned his Ph.D. in 2018 from the University of Naples, Federico II, with a focus on strategic reasoning in game theory. After completing a postdoctoral position at the University of Evry (2018–2020), he became an associate professor at Télécom Paris in 2020. In 2024, he obtained the HDR (Habilitation à Diriger des Recherches) in Computer Science, Data Science, and Artificial Intelligence. Dr. Malvone has co-authored over 90 publications in formal verification and game theory. He actively mentors postdoctoral, doctoral, and master’s students, leading projects on formal verification, strategic reasoning, and cybersecurity.',
+      talkTitle: 'From Theory to Practice: Formal Verification of Multi-Agent Systems',
+      abstract: 'Game-theoretic methods provide a powerful foundation for reasoning about strategic behavior in multi-agent systems. Over the past decades, this line of research has led to the development of expressive formalisms such as Alternating-time Temporal Logic and Strategy Logic, enabling the specification and verification of complex strategic properties. Despite these theoretical advances, applying formal verification techniques to realistic multi-agent systems remains challenging. Existing tools are often tightly coupled to specific logics or models, limiting their flexibility and usability. In this talk, we provide an overview of formal verification techniques for multi-agent systems, with a particular focus on strategic reasoning. We then present VITAMIN, a modular and extensible framework designed to bridge the gap between theory and practice. Unlike existing approaches, VITAMIN supports different logical formalisms and system models through a unified architecture, making the verification process more flexible and accessible. We outline the main design principles behind VITAMIN and illustrate its use.',
       initials: 'VM',
+      image: 'images/vadim.jpeg',
       link: ''
     }
   ],
@@ -704,6 +706,9 @@ function renderSpeakers() {
 
   speakerGrid.textContent = '';
   siteContent.speakers.forEach((speaker) => {
+    const avatarMarkup = speaker.image
+      ? `<div class="avatar avatar-photo"><img src="${speaker.image}" alt="${speaker.name}"></div>`
+      : `<div class="avatar ${speaker.initials === 'TBA' ? 'is-placeholder' : ''}" aria-hidden="true">${speaker.initials}</div>`;
     const bioMarkup = speaker.bio ? `<p class="person-bio">${speaker.bio}</p>` : '';
     const talkMarkup = speaker.talkTitle
       ? `
@@ -724,7 +729,7 @@ function renderSpeakers() {
     }
     card.innerHTML = `
       <div class="person-top">
-        <div class="avatar ${speaker.initials === 'TBA' ? 'is-placeholder' : ''}" aria-hidden="true">${speaker.initials}</div>
+        ${avatarMarkup}
         <div class="person-meta">
           <p class="card-label">Invited Speaker</p>
           <h3 class="person-name">${speaker.name}</h3>
