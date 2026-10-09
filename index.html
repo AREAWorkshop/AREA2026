@@ -78,12 +78,15 @@
                   <span>PAAMS 2026</span>
                 </a>
               </span>
+              
               <span class="hero-deadline" aria-live="polite">
-                <span class="hero-deadline-prefix">Submit by</span>
-                <span class="hero-deadline-date" data-hero-deadline-date>25 June 2026</span>
-                <span class="hero-deadline-countdown" data-hero-deadline-countdown>Countdown loading...</span>
+                <span class="hero-deadline-prefix">Workshop starts in</span>
+                <span class="hero-deadline-countdown"
+                      data-hero-deadline-countdown>
+                  Countdown loading...
+                </span>
               </span>
-            </span>
+
           </div>
           <div class="graph-node-layer" id="heroGraphNodes"></div>
         </div>
@@ -185,36 +188,50 @@
             </div>
           </div>
 
-          <div class="programme-layout">
-            <div class="programme-note reveal">
-              <p class="programme-note-title">Wednesday, 21 October 2026</p>
-              <p>
-                Paper slots include a 20-minute presentation and 5 minutes for Q&amp;A. Invited talks include a 50-minute talk and 10 minutes for Q&amp;A.
-              </p>
-            </div>
+          
+<div class="programme-toolbar reveal">
+  <div class="programme-info">
+    <h3>Wednesday, 21 October 2026</h3>
+    <p>
+      Paper presentations: 20 min + 5 min Q&amp;A
+      <span class="programme-separator">·</span>
+      Invited talks: 50 min + 10 min Q&amp;A
+    </p>
+  </div>
 
-            <div class="programme-search reveal" role="search">
-              <label for="programmeSearch">Search the programme</label>
-              <div class="programme-search-field">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <circle cx="11" cy="11" r="6.5"></circle>
-                  <path d="m16 16 4 4"></path>
-                </svg>
-                <input id="programmeSearch" type="search" placeholder="Search by title or author" autocomplete="off">
-              </div>
-              <p class="programme-search-status" id="programmeSearchStatus" role="status" aria-live="polite"></p>
-            </div>
+  <div class="programme-search" role="search">
+    <label for="programmeSearch">Search the programme</label>
+    <div class="programme-search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="11" cy="11" r="6.5"></circle>
+        <path d="m16 16 4 4"></path>
+      </svg>
+      <input
+  id="programmeSearch"
+  type="search"
+  aria-label="Search the programme"
+  placeholder="Search by title or author"
+  autocomplete="off"
+>
+    </div>
+    <p class="programme-search-status"
+       id="programmeSearchStatus"
+       role="status" aria-live="polite"></p>
+  </div>
+</div>
 
-            <div class="programme-table reveal" aria-label="AREA 2026 workshop programme">
-              <div class="programme-table-head" aria-hidden="true">
-                <span>Time</span>
-                <span>Activity</span>
-              </div>
-              <ol class="programme-list" id="programmeList"></ol>
-            </div>
-          </div>
-        </div>
-      </section>
+<div class="programme-table reveal"
+     aria-label="AREA 2026 workshop programme">
+  <div class="programme-table-head" aria-hidden="true">
+    <span>Time</span>
+    <span>Activity</span>
+  </div>
+  <ol class="programme-list" id="programmeList"></ol>
+</div>
+</div>
+</div>
+</section>
+
 
       <section class="content-panel" id="speakers" data-panel role="region" tabindex="-1" aria-labelledby="speakers-title">
         <div class="container">
@@ -251,10 +268,7 @@
           <div class="venue-layout">
             <article class="card venue-card reveal">
               <p>
-                AREA 2026 is organised in conjunction with PAAMS 2026 and connects the workshop with the broader agents and multi-agent systems community.
-              </p>
-              <p>
-                Venue and participation details, including any online arrangements, remain to be confirmed by the host conference.
+                AREA 2026 will take place in Naples on 21 October 2026, in conjunction with PAAMS 2026. The workshop will be held at the University of Naples Federico II, with registration managed through the host conference.
               </p>
               <div class="venue-facts">
                 <div class="fact-card">
@@ -263,12 +277,18 @@
                 </div>
                 <div class="fact-card">
                   <strong>Dates</strong>
-                  <span>21st, October 2026</span>
+                  <span>21 October 2026</span>
                 </div>
-                <div class="fact-card">
-                  <strong>Venue</strong>
-                  <span>TBA</span>
-                </div>
+                
+<div class="fact-card">
+  <strong>Venue</strong>
+  <span>
+    Aula Geologia 1 (G1)<br>
+    <small>Dipartimento di Scienze Politiche (DiSP)</small><br>
+    <small>Largo San Marcellino 10</small>
+  </span>
+</div>
+
                 <div class="fact-card">
                   <strong>Registration</strong>
                   <span>Via the host conference platform</span>
@@ -280,18 +300,26 @@
               </div>
             </article>
 
-            <aside class="card venue-visual reveal" aria-label="Venue map placeholder">
-              <p class="card-label">Map</p>
-              <div class="venue-map-placeholder" aria-hidden="true">
-                <div class="venue-map-grid"></div>
-                <div class="venue-map-pin">
-                  <span>Naples, Italy</span>
-                </div>
-                <div class="venue-map-badge paams">PAAMS 2026</div>
-                <div class="venue-map-badge venue">Venue TBA</div>
-              </div>
-              <p class="venue-caption">A Google Maps embed can be added here once the venue has been confirmed.</p>
-            </aside>
+            
+<aside class="card venue-visual reveal" aria-label="Workshop venue map">
+  <p class="card-label">Map</p>
+
+  <iframe
+    class="venue-map"
+    title="AREA 2026 venue – Largo San Marcellino 10, Naples"
+    src="https://www.google.com/maps?q=Largo+San+Marcellino+10,+Napoli,+Italia&output=embed"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen>
+  </iframe>
+
+  <p class="venue-caption">
+    Aula Geologia 1 (G1)<br>
+    <small>Largo San Marcellino 10, Naples</small>
+  </p>
+
+</aside>
+
           </div>
         </div>
       </section>

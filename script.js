@@ -112,8 +112,8 @@ const siteContent = {
     },
     {
       label: 'Workshop dates',
-      date: 'October 2026',
-      note: 'One workshop day during PAAMS 2026 (21 October 2026).',
+      date: '21 October 2026',
+      note: 'One workshop day during PAAMS 2026.',
       highlight: true
     }
   ],
@@ -127,11 +127,11 @@ const siteContent = {
     {
       kind: 'invited',
       time: '11:10–12:10',
-      title: 'TBA',
+      title: 'Towards Reliable Human-Aware Robot Autonomy: Modelling the User, Bounding Adaptation, Explaining Behaviour',
       type: 'Invited talk',
       speaker: 'Silvia Rossi',
       affiliation: 'University of Naples Federico II (Unina)',
-      abstract: 'TBA'
+      abstract: 'Autonomous robots that operate alongside people must do more than select technically correct actions. They must infer uncertain human goals, beliefs, and needs; adapt their behaviour without overstepping; and make their decisions understandable when things go wrong. Drawing on recent work in Theory-of-Mind-based assistance, personalised and reinforcement-learning-driven interaction, transparency, and multimodal explanations of robot failures, this talk will explore reliability in human-facing autonomy as a two-way property. I will discuss how human-state models can support adaptation, why these models require explicit uncertainty and behavioural bounds, and how explainability can be engineered as part of the robot architecture rather than added after deployment. I will finally discuss open challenges in connecting human-aware robotics with runtime monitoring, formal specifications, and assurance of user agency, calibrated trust, and safe long-term interaction.'
     },
     {
       kind: 'paper',
@@ -229,17 +229,19 @@ const siteContent = {
   ],
   speakers: [
     {
-      name: 'Silvia Rossi',
+      name: '<a href="http://wpage.unina.it/silrossi/index.html" target="_blank" rel="noopener noreferrer">Silvia Rossi</a>',
       affiliation: 'University of Naples Federico II (Unina)',
-      talkTitle: 'TBA',
-      abstract: 'TBA',
+      bio: 'Silvia Rossi is an Associate Professor at the University of Naples Federico II, Italy, and co-chief manager of the PRISCA Laboratory. Her research focuses on multi-agent systems, human–robot interaction, cognitive architectures, behaviour-based robotics, and user modelling and personalisation. She has been Principal Investigator of the national UPA4SAR project on user-centred adaptation in socially assistive robotics.',
+      talkTitle: 'Towards Reliable Human-Aware Robot Autonomy: Modelling the User, Bounding Adaptation, Explaining Behaviour',
+      abstract: 'Autonomous robots that operate alongside people must do more than select technically correct actions. They must infer uncertain human goals, beliefs, and needs; adapt their behaviour without overstepping; and make their decisions understandable when things go wrong. Drawing on recent work in Theory-of-Mind-based assistance, personalised and reinforcement-learning-driven interaction, transparency, and multimodal explanations of robot failures, this talk will explore reliability in human-facing autonomy as a two-way property. I will discuss how human-state models can support adaptation, why these models require explicit uncertainty and behavioural bounds, and how explainability can be engineered as part of the robot architecture rather than added after deployment. I will finally discuss open challenges in connecting human-aware robotics with runtime monitoring, formal specifications, and assurance of user agency, calibrated trust, and safe long-term interaction.',
       initials: 'SR',
+      image: 'images/rossi.jpeg',
       link: ''
     },
     {
-      name: 'Vadim Malvone',
+      name: '<a href="https://vadimmalvone.github.io/" target="_blank" rel="noopener noreferrer">Vadim Malvone</a>',
       affiliation: 'Télécom Paris',
-      bio: 'Vadim Malvone is an expert in multi-agent system verification with over ten years of research experience. He earned his Ph.D. in 2018 from the University of Naples, Federico II, with a focus on strategic reasoning in game theory. After completing a postdoctoral position at the University of Evry (2018–2020), he became an associate professor at Télécom Paris in 2020. In 2024, he obtained the HDR (Habilitation à Diriger des Recherches) in Computer Science, Data Science, and Artificial Intelligence. Dr. Malvone has co-authored over 90 publications in formal verification and game theory. He actively mentors postdoctoral, doctoral, and master’s students, leading projects on formal verification, strategic reasoning, and cybersecurity.',
+      bio: 'Vadim Malvone is an Associate Professor at Télécom Paris, Institut Polytechnique de Paris, France. He received his Ph.D. in 2018 from the University of Naples Federico II and obtained his HDR in 2024. His research focuses on formal verification, multi-agent systems, strategic reasoning, and game theory. He has co-authored over 90 publications and actively supervises research projects in formal verification, strategic reasoning, and cybersecurity.',
       talkTitle: 'From Theory to Practice: Formal Verification of Multi-Agent Systems',
       abstract: 'Game-theoretic methods provide a powerful foundation for reasoning about strategic behavior in multi-agent systems. Over the past decades, this line of research has led to the development of expressive formalisms such as Alternating-time Temporal Logic and Strategy Logic, enabling the specification and verification of complex strategic properties. Despite these theoretical advances, applying formal verification techniques to realistic multi-agent systems remains challenging. Existing tools are often tightly coupled to specific logics or models, limiting their flexibility and usability. In this talk, we provide an overview of formal verification techniques for multi-agent systems, with a particular focus on strategic reasoning. We then present VITAMIN, a modular and extensible framework designed to bridge the gap between theory and practice. Unlike existing approaches, VITAMIN supports different logical formalisms and system models through a unified architecture, making the verification process more flexible and accessible. We outline the main design principles behind VITAMIN and illustrate its use.',
       initials: 'VM',
@@ -279,7 +281,7 @@ const siteContent = {
   { name: 'Matt Luckcuck', affiliation: 'University of Nottingham' },
   { name: 'Pedro Ribeiro', affiliation: 'University of York' },
   { name: 'Stefano Mariani', affiliation: 'Università di Modena e Reggio Emilia' },
-  { name: 'Rosemary Monahan', affiliation: 'Maynooth University, Ireland' },
+  { name: 'Rosemary Monahan', affiliation: 'Maynooth University' },
   { name: 'Babak Esfandiari', affiliation: 'Carleton University' },
   { name: 'Gleifer Alves', affiliation: 'UTFPR - Universidade Tecnológica Federal do Paraná - Campus Ponta Grossa' },
   { name: 'Livia Lestingi', affiliation: 'Politecnico di Milano' },
@@ -287,7 +289,7 @@ const siteContent = {
   { name: 'Tobias Ahlbrecht', affiliation: 'Department of Informatics, Clausthal University of Technology' },
   { name: 'Christian Colombo', affiliation: 'University of Malta' },
   { name: 'Stefania Monica', affiliation: 'Università degli Studi di Modena e Reggio Emilia' },
-  { name: 'Viviana Mascardi', affiliation: 'University of Genova, Italy' }
+  { name: 'Viviana Mascardi', affiliation: 'University of Genova' }
 ]
 };
 
@@ -553,47 +555,42 @@ function renderImportantDates() {
   });
 }
 
+
 function renderHeroDeadline() {
-  const deadlineDate = document.querySelector('[data-hero-deadline-date]');
-  const countdown = document.querySelector('[data-hero-deadline-countdown]');
-  if (!deadlineDate || !countdown) {
-    return;
-  }
-
-  const { submitDeadlineDisplay, submitDeadlineISO } = siteContent.workshop;
-  deadlineDate.textContent = submitDeadlineDisplay;
-
-  const deadline = new Date(`${submitDeadlineISO}T23:59:59`);
-  if (Number.isNaN(deadline.getTime())) {
-    countdown.textContent = 'Deadline to be confirmed';
-    return;
-  }
+  const countdown = document.querySelector(
+    '[data-hero-deadline-countdown]'
+  );
+  if (!countdown) return;
 
   const updateCountdown = () => {
-    const now = new Date();
-    const diff = deadline.getTime() - now.getTime();
+    const today = new Date().toLocaleDateString('en-CA', {
+      timeZone: 'Europe/Rome',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    });
 
-    if (diff <= 0) {
-      countdown.textContent = 'Deadline passed';
-      return;
+    const [year, month, day] = today.split('-').map(Number);
+    const currentDay = Date.UTC(year, month - 1, day);
+    const workshopDay = Date.UTC(2026, 9, 21);
+    const days = Math.round(
+      (workshopDay - currentDay) / 86400000
+    );
+
+    if (days > 0) {
+      countdown.textContent =
+        `${days} ${days === 1 ? 'day' : 'days'} to go`;
+    } else if (days === 0) {
+      countdown.textContent = 'AREA 2026 is happening today!';
+    } else {
+      countdown.textContent = 'Thank you for joining AREA 2026!';
     }
-
-    const msPerDay = 24 * 60 * 60 * 1000;
-    const msPerHour = 60 * 60 * 1000;
-    const days = Math.floor(diff / msPerDay);
-    const hours = Math.floor((diff % msPerDay) / msPerHour);
-
-    if (days > 7) {
-      countdown.textContent = `${days} days left`;
-      return;
-    }
-
-    countdown.textContent = `${days}d ${hours}h left`;
   };
 
   updateCountdown();
-  window.setInterval(updateCountdown, 60 * 1000);
+  window.setInterval(updateCountdown, 60000);
 }
+
 
 function normalizeSearchText(value) {
   return value
@@ -709,7 +706,12 @@ function renderSpeakers() {
     const avatarMarkup = speaker.image
       ? `<div class="avatar avatar-photo"><img src="${speaker.image}" alt="${speaker.name}"></div>`
       : `<div class="avatar ${speaker.initials === 'TBA' ? 'is-placeholder' : ''}" aria-hidden="true">${speaker.initials}</div>`;
-    const bioMarkup = speaker.bio ? `<p class="person-bio">${speaker.bio}</p>` : '';
+      const bioMarkup = speaker.bio ? `
+        <div class="speaker-bio-section">
+        <h4 class="speaker-bio-title">About the speaker</h4>
+         <p class="person-bio">${speaker.bio}</p>
+      </div>
+` : '';
     const talkMarkup = speaker.talkTitle
       ? `
         <div class="speaker-talk">
