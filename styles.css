@@ -660,6 +660,16 @@ summary:focus-visible {
   letter-spacing: 0.03em;
 }
 
+.hero-deadline-link {
+  color: rgba(255, 214, 195, 0.96);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.hero-deadline-link::before {
+  content: none;
+}
+
 .hero-deadline-date::before,
 .hero-deadline-countdown::before {
   content: "·";

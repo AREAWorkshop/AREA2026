@@ -563,6 +563,8 @@ function renderHeroDeadline() {
   if (!countdown) return;
 
   const updateCountdown = () => {
+    if (!countdown.isConnected) return true;
+
     const today = new Date().toLocaleDateString('en-CA', {
       timeZone: 'Europe/Rome',
       year: 'numeric',
@@ -583,12 +585,25 @@ function renderHeroDeadline() {
     } else if (days === 0) {
       countdown.textContent = 'AREA 2026 is happening today!';
     } else {
-      countdown.textContent = 'Thank you for joining AREA 2026!';
+      const link = document.createElement('a');
+      link.className = 'hero-deadline-countdown hero-deadline-link';
+      link.href = 'https://link.springer.com/book/9783032423665';
+      link.target = '_blank';
+      link.rel = 'noreferrer';
+      link.textContent = 'AREA 2026 Proceedings';
+      countdown.previousElementSibling?.remove();
+      countdown.replaceWith(link);
+      return true;
     }
+
+    return false;
   };
 
-  updateCountdown();
-  window.setInterval(updateCountdown, 60000);
+  if (!updateCountdown()) {
+    const intervalId = window.setInterval(() => {
+      if (updateCountdown()) window.clearInterval(intervalId);
+    }, 60000);
+  }
 }
 
 
